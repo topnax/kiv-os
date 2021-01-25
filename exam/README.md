@@ -148,4 +148,12 @@
     - nezměněný kód knihovny bude sdílený pro všechny procesy
 - **BSP** (Bootstrap Processor)
     - po zapnutí počítače a inicializaci je aktivní pouze jeden procesor, respektive jedno procesorové jádro - tzv. **BSP** aneb _bootstrap procesor_
-
+- **TSR** (Terminate and Stay Resident)
+    - pomocí systémového volání program obsluhující přerušení zůstane v paměti o po dokončení obsluhy
+- **TLB** (Translation Look-aside Buffer)
+    - cachuje převody virtuálních adres na fyzickou
+    - je nutné ale vyprázdnit při změně kontextu
+    - rychlá, ale malá
+    - zásadní vliv na výkon
+- **PAE** (Page Address Extension)
+    - programy a jádro dokázalo adresovat pouze 4GB RAM, avšak tabulka stránek mohla adresovat více než to
