@@ -111,7 +111,13 @@
         - routovací tabulka, která přesměruje přerušení od sběrnic periferií na některý lokální APIC
     9. Pokračuje se vlastní inicializací SMP jádra
 
+### Senzitivní instrukce
+- termín z oblasti virtualizace
+- taková instrukce, která mění HW konfiguraci a jejich výsledek závisí na aktuální HW konfiguraci
+
 ## Zkratky
+- **SMP** (Symmetric multiprocessing)
+- **ISR** (Interrupt Service Routine)
 - **MBR** (Master Boot Record)
     - má za úkol načíst ze zbytek zavaděče ze správného/aktivního/vybraného disku
         - přímo zavaděč OS
@@ -128,6 +134,10 @@
     - značka říká, že se má na příslušnou adresu zapsat hodnota získaná pomocí `dlsym/GetProcAddress` (zařídí zavaděč knihovny)
 - **PIC** (Programmable Interrupt Controller)
     - překládá číslo IRQ na index do tabulky vektoru přerušení
+    - jeden PIC dokáže obsloužit maximálně 8 IRQ požadavků
+        - proto se používala kombinace 2 PIC
+            - Master PIC (např. hodiny)
+            - Slave PIC (sekundární ATA kanál)
 - **APIC** (Advanced Programmable Interrupt Controller)
     - umožňuje směrovat mnohem více IRQ než PIC
     - umožňuje konstrukci SMP
